@@ -1,9 +1,9 @@
 export async function Navigator() {
     return (
-        <div>
+        <header>
             <h1>
-                Hello
+                <b>Navigator Bar</b>
             </h1>
-        </div>
+        </header>
     );
 }
