@@ -3,6 +3,11 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Head from './head'
 import { Navigator } from './components/Navigator'
+import { Footer } from './components/Footer'
+import localFont from 'next/font/local'
+
+const NeueHaasDisplayMediu = localFont({ src: "../assets/font/NeueHaasDisplayMediu.ttf"})
+const NeueHaasDisplayLight = localFont({ src: "../assets/font/NeueHaasDisplayLight.ttf"})
 
 
 
@@ -25,11 +30,11 @@ export default function RootLayout({
       
       
         
-      <body className={inter.className}>
+      <body style={NeueHaasDisplayLight.style} className="flex flex-col min-h-screen">
       <Navigator />  
-        <main>
+        
         {children}
-        </main>
+        <Footer />
         </body>
     </html>
   )
